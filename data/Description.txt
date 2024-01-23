@@ -1,0 +1,33 @@
+Description
+name: The name of the Telegram channel.
+type: The type of the Telegram channel.
+id: The unique identifier for the Telegram channel.
+messages: An array containing individual messages within the channel:
+id: The unique identifier for each message.
+type: The type of the message, distinguishing between "message" (content-related messages).
+date: The timestamp indicating when the message was sent.
+date_unixtime: The Unix timestamp equivalent of the message's date.
+edited: Timestamp indicating when the message was last edited.
+edited_unixtime: The Unix timestamp equivalent of the edited date.
+from: The sender or actor of the message,
+from_id: The unique identifier for the sender.
+author: The author of the message.
+photo: Information about any included photo (not provided in the JSON object).
+width: The width of the included photo.
+height: The height of the included photo.
+text: The textual content of the message, including an array with Amharic text and mention entities.
+text_entities: Information about entities in the text, such as mentions, with details about the type and text.
+
+
+
+
+
+Structure
+raw: A directory holding all the telegram raw message data.
+parsed: A directory holding the telegram parsed message data with columns:
+id: Telegram Channel ID
+text: message content
+date: message broadcast datetime.
+label (s): one or more data labels relevant to your supervised training 
+cleaned: A directory holding all the telegram channel’s cleaned message data.
+final: A directory holding all the message data depending on the need; for example this directory might hold the channel's word frequencies, n_grams, and many more.
